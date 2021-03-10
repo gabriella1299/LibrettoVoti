@@ -24,6 +24,11 @@ public class TestLibretto {
 		
 		Libretto librettoVenticinque= libretto.votiUguali(25); //posso aggiungere altri oggetti
 		System.out.println(librettoVenticinque); //usa metodo di stampa della classe libretto
+	
+		Voto analisi=libretto.ricercaCorso("Analisi 1");
+		System.out.println(analisi);
+	
+	
 	}
 	
 	
