@@ -11,6 +11,7 @@ public class Libretto {
 	public Libretto() {
 		//metto this per ricordare che non e' una variabile di questo metodo, ma esterna!
 		this.voti=new ArrayList<>();//inizializzo variabile creando un oggetto con new
+		
 	}
 	
 	public void add(Voto v) { //uso la delega

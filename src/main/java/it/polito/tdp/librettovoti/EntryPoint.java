@@ -2,6 +2,8 @@ package it.polito.tdp.librettovoti;
 
 import javafx.application.Application;
 import static javafx.application.Application.launch;
+
+import it.polito.tdp.librettovoti.model.Libretto;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,7 +14,16 @@ public class EntryPoint extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
+       
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Scene.fxml"));
+    	
+    	Parent root = loader.load();//metodo richiamato su un oggetto, non piu' in modo statico su una classe
+    								//il nostro oggetto ha un metodo: getController();
+    	FXMLController controller = loader.getController(); //ha bisogno di una classe per essere settata
+        //parent root sarebbe la scena
+        
+        Libretto model=new Libretto();//modello su cui il controller richiama i metodi, BISOGNA DECIDERE SOLO LA CLASSE CHE FA IL MODELLO
+        controller.setModel(model);
         
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
