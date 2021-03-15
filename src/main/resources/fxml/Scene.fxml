@@ -36,7 +36,7 @@
                   <DatePicker fx:id="pickerEsame" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                </children>
             </GridPane>
-            <TextArea fx:id="txtResult" />
+            <TextArea fx:id="txtResult" editable="false" />
          </children>
                
       </VBox>

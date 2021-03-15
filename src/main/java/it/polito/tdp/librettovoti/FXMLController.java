@@ -11,7 +11,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
@@ -76,8 +75,6 @@ public class FXMLController {
     		txtResult.setText("Errore: la data e' obbligatoria!");
     		return;
     	}
-    	
-    	//TODO: AGGIUNGERE tutti i controlli SUI CAMPI in modo che siano LECITI!
     	
     	//ESEGUI L'AZIONE
     	Voto voto=new Voto(nomeEsame, votoInt, data);
