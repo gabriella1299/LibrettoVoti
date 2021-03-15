@@ -22,7 +22,7 @@ public class Libretto {
 		this.votiMap.put(v.getNome(), v);
 	}
 	
-	/*public void stampaVotiUguali(int punteggio) {
+	/*public void stampaVotiUguali(int punteggio) {-->sara' chiamato solo per fare la stampa, troppo specifico
 		//il libretto stampa da solo i voti
 		System.out.println();
 	}
@@ -37,8 +37,10 @@ public class Libretto {
 	
 	public List<Voto> listaVotiUguali(int punteggio){ //ancora meglio del precedente perche' stampa i voti
 		//restituisce solo i voti uguali al criterio
-		//espone all'esterno la struttura dati utilizzata all'interno
-	
+		//espone all'esterno il tipo di struttura dati utilizzata all'interno
+		//se la implemento in modo diverso dovro' cambiare tutto perche' chiedo di restituire una lista
+		//rimango piu' generale possibile: uso Libretto!! (con tutti i suoi metodi)
+		
 		List<Voto> risultato=new ArrayList<>();
 		for(Voto v:this.voti) {
 			if(v.getVoto()==punteggio) {
